@@ -1,0 +1,9 @@
+
+<div class="userclass container">
+    <div>
+        <h2>{{ users[random].name }}</h2>
+        <p>{{ users[random].skills }}</p>
+        <p >{{users[random].price | currency: '£'}}</p>
+    </div>
+</div>
+<div ng-transclude></div>

@@ -1,0 +1,26 @@
+[{
+	"name": "alabi",
+	"price": 30,
+	"skills": "html",
+	"available": true
+}, {
+	"name": "joe",
+	"price": 25,
+	"skills": "css",
+	"available": false
+}, {
+	"name": "regan",
+	"price": 10,
+	"skills": "java",
+	"available": true
+}, {
+	"name": "segun",
+	"price": 40,
+	"skills": "javascript",
+	"available": true
+}, {
+	"name": "lanre",
+	"price": 70,
+	"skills": "css",
+	"available": true
+}]

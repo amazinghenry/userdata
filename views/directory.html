@@ -1,0 +1,35 @@
+
+    <div class="subheader">
+        <div class="button-group">
+            <button class="btn-name" ng-click = "order = 'name' " >Order by Name</button>
+            <button class="btn-price" ng-click = "order = 'price' ">Order by Price</button>
+        </div>
+        <div class="srch container">
+            <input type="text" ng-model="search" placeholder="search directory">
+        </div>
+    </div>
+
+    <div class="container-fluid userclass-group">
+        <div class="userclass container">
+            <div ng-repeat = "user in users | orderBy: order | filter : search">
+                <h2>{{ user.name }}</h2>
+                <p>{{ user.skills }}</p>
+                <p >{{user.price | currency: '£'}}</p>
+            </div>
+        </div>
+    </div>
+ 
+    <div class="container-fluid form-container">
+        <form ng-submit = "addUser()">
+            <input type="text" class="form-control" placeholder="name" ng-model="newuser.name">
+            <select aria-label = "choose a skill" id="skills" name="skills" class="form-control" ng-model="newuser.skills">
+                <option value="">Select skill</option>
+                <option value="html">html</option>
+                <option value="css">css</option>
+                <option value="javascript">javascript</option>
+                <option value="java">java</option>
+            </select>
+            <input type="text" class="form-control" placeholder="price" ng-model="newuser.price">
+            <input type="submit" class="form-control" value="Add new user">
+        </form>
+    </div>
